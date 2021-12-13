@@ -14264,9 +14264,18 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Overview:">Overview:<a class="anchor-link" href="#Overview:">&#182;</a></h2><p>Air pollution is considered to be one of the biggest environmental threat to human health and can cause or contribute to serious health problems like respiratory diseases such as asthma. As someone who has family members with asthma, it is very important to me that people like my family are not exposed to harmful air pollutants. As a resident of New York City, I wanted to explore how the air quality is in NYC and how it affects the health of New Yorkers.</p>
-<p>For my project, I used data analysis to explore how the air quality has changed over time in NYC and how the air quality varies in different boroughs of NYC. I also explored the health effects of air pollution on different boroughs of NYC to find out if there are any disparities in how different boroughs are affected by air pollution. I used the Air Quality dataset from NYC Open Data as my data source. For analysis of the dataset, I used python's data analysis and manipulation library pandas. Lastly, to produce visualizations, I used python's plotting libraries called matplotlib and seaborn.</p>
-<p>My initial hypothesis for my project was that Manhattan will have the highest air pollution since it's the most densely populated borough and the economic hub of NYC and thus those living in Manhattan are the ones that are most affected by air pollution.</p>
+<div>
+     <img src="figures/front_img.jpeg" width=400px style="float: right;"/>
+    <h2> Overview: </h2>
+    <p style="width: 450px;">
+     Air pollution is considered to be one of the biggest environmental threat to human health and can cause or contribute to serious health problems like respiratory diseases such as asthma. As a resident of New York City, I wanted to explore how the air quality is in NYC and how it affects the health of New Yorkers. Therefore, for my project, I used data analysis to explore how the air quality has changed over time in NYC and how the air quality varies in different boroughs of NYC. I also explored the health effects of air pollution on different boroughs of NYC to find out if there are any disparities in how different boroughs are affected by air pollution. I used the Air Quality dataset from NYC Open Data as my data source. For analysis of the dataset, I used python's data analysis and manipulation library pandas. Lastly, to produce visualizations, I used python's plotting libraries called matplotlib and seaborn. 
+    </p> 
+</div>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Hypothesis:">Hypothesis:<a class="anchor-link" href="#Hypothesis:">&#182;</a></h2><p>My initial hypothesis for my project was that Manhattan will have the highest air pollution since it's the most densely populated borough and the economic hub of NYC and thus those living in Manhattan are the ones that are most affected by air pollution.</p>
 
 </div>
 </div>
@@ -14280,34 +14289,109 @@ a.anchor-link {
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Techniques:">Techniques:<a class="anchor-link" href="#Techniques:">&#182;</a></h2><h4 id="Data-Cleaning:">Data Cleaning:<a class="anchor-link" href="#Data-Cleaning:">&#182;</a></h4><p>I downloaded the Air Quality dataset by exporting the whole dataset from NYC OpenData as a CSV file. To clean my data, I used python's data analysis and manipulation library pandas. First I loaded my dataset as a pandas dataframe and filtered for just the rows with data for the boroughs. Most of the rows of the dataset contained data on the air pollutant, while other rows contained data on the health effects of air pollutants. Therefore I divided the dataframe containing the whole dataset into 2 different dataframes with one containing just the rows with the air pollutant data and another dataframe containing just the health effects data. Then I took the air pollutants dataframe and created 4 more dataframes as subsets of the air pollutants dataframe, with each dataframe containing data for each of the four pollutants: PM2.5, NO2, O3, and SO2. I also did the same for the health effects dataframe by creating 10 subsets of the dataframe, each containing different type of health effects data.</p>
+<h2 id="Techniques:">Techniques:<a class="anchor-link" href="#Techniques:">&#182;</a></h2><h4 id="Data-Cleaning:">Data Cleaning:<a class="anchor-link" href="#Data-Cleaning:">&#182;</a></h4><p>I downloaded the Air Quality dataset by exporting the whole dataset from NYC OpenData as a CSV file. To clean my data, I used python's data analysis and manipulation library pandas. First I loaded my dataset as a pandas dataframe and filtered for just the rows with data for the boroughs. Most of the rows of the dataset contained data on the air pollutant, while other rows contained data on the health effects of air pollutants. Therefore I divided the dataframe containing the whole dataset into 2 different dataframes with one containing just the rows with the air pollutant data and another dataframe containing just the health effects data. Then I took the air pollutants dataframe and created 4 more dataframes as subsets of the air pollutants dataframe, with each dataframe containing data for each of the four pollutants: PM2.5, NO2, O3, and SO2. I also did the same for the health effects dataframe by creating 10 subsets of the health effects dataframe, each containing different type of health effects data.</p>
 <h4 id="Producing-Visualizations:">Producing Visualizations:<a class="anchor-link" href="#Producing-Visualizations:">&#182;</a></h4><p>For each one of the 4 dataframes for each four pollutants(PM2.5, NO2, O3, and SO2), I used seaborn and matplotlib to create a time series graph that displays how the average concentration of the pollutant has changed over the years for each borough from 2009 - 2017. I also did the same for the 10 health effects dataframes by creating 10 time series graphs that each displays how each type of health effect has changed over the years for each borough from 2009-2017.</p>
 
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Visualizations:">Visualizations:<a class="anchor-link" href="#Visualizations:">&#182;</a></h2><h3 id="Air-Pollutants:">Air Pollutants:<a class="anchor-link" href="#Air-Pollutants:">&#182;</a></h3><h4 id="The-following-figure-shows-how-the-concentration-of-the-PM2.5-pollutant-has-changed-over-time-in-each-borough-of-NYC-from-2009---2018.">The following figure shows how the concentration of the PM2.5 pollutant has changed over time in each borough of NYC from 2009 - 2018.<a class="anchor-link" href="#The-following-figure-shows-how-the-concentration-of-the-PM2.5-pollutant-has-changed-over-time-in-each-borough-of-NYC-from-2009---2018.">&#182;</a></h4><p><img src="figures/PM25_pollutant.png" alt="PM25 concentration"></p>
-<h4 id="The-following-figure-shows-how-the-concentration-of-the-NO2-pollutant-has-changed-over-time-in-each-borough-of-NYC-from-2009---2018.">The following figure shows how the concentration of the NO2 pollutant has changed over time in each borough of NYC from 2009 - 2018.<a class="anchor-link" href="#The-following-figure-shows-how-the-concentration-of-the-NO2-pollutant-has-changed-over-time-in-each-borough-of-NYC-from-2009---2018.">&#182;</a></h4><p><img src="figures/NO2_pollutant.png" alt="NO2 concentration"></p>
-<h4 id="The-following-figure-shows-how-the-concentration-of-the-O3-pollutant-has-changed-over-time-in-each-borough-of-NYC-from-2009---2018.">The following figure shows how the concentration of the O3 pollutant has changed over time in each borough of NYC from 2009 - 2018.<a class="anchor-link" href="#The-following-figure-shows-how-the-concentration-of-the-O3-pollutant-has-changed-over-time-in-each-borough-of-NYC-from-2009---2018.">&#182;</a></h4><p><img src="figures/O3_pollutant.png" alt="O3 concentration"></p>
-<h4 id="The-following-figure-shows-how-the-concentration-of-the-SO2-pollutant-has-changed-over-time-in-each-borough-of-NYC-from-2009---2016.">The following figure shows how the concentration of the SO2 pollutant has changed over time in each borough of NYC from 2009 - 2016.<a class="anchor-link" href="#The-following-figure-shows-how-the-concentration-of-the-SO2-pollutant-has-changed-over-time-in-each-borough-of-NYC-from-2009---2016.">&#182;</a></h4><p>Note that unlike for the other pollutants, we only have data values for SO2 pollutant from 2009 up to 2016. The reason we don't have data for the more recent years 2017-2018 is because the SO2 levels have decreased so much in NYC that it is almost undetectable to be able to collect data on it.
-   <img src="figures/SO2_pollutant.png" alt="SO2 concentration"></p>
-<h3 id="Health-effects-of-air-pollutants-PM2.5-and-O3:">Health effects of air pollutants PM2.5 and O3:<a class="anchor-link" href="#Health-effects-of-air-pollutants-PM2.5-and-O3:">&#182;</a></h3><h4 id="The-following-figures-show-how-the-PM2.5-pollutant-has-affected-the-health-of-New-Yorkers-from-2009---2017.">The following figures show how the PM2.5 pollutant has affected the health of New Yorkers from 2009 - 2017.<a class="anchor-link" href="#The-following-figures-show-how-the-PM2.5-pollutant-has-affected-the-health-of-New-Yorkers-from-2009---2017.">&#182;</a></h4><p><img src="figures/health_fig1.png" alt="PM25 health effect"> 
-   <img src="figures/health_fig2.png" alt="PM25 health effect"> 
-   <img src="figures/health_fig3.png" alt="PM25 health effect">
-   <img src="figures/health_fig4.png" alt="PM25 health effect"> 
-   <img src="figures/health_fig6.png" alt="PM25 health effect"></p>
-<h4 id="The-following-figures-show-how-the-O3-pollutant-has-affected-the-health-of-New-Yorkers-from-2009---2017.">The following figures show how the O3 pollutant has affected the health of New Yorkers from 2009 - 2017.<a class="anchor-link" href="#The-following-figures-show-how-the-O3-pollutant-has-affected-the-health-of-New-Yorkers-from-2009---2017.">&#182;</a></h4><p><img src="figures/health_fig5.png" alt="O3 health effect"><br>
-   <img src="figures/health_fig7.png" alt="O3 health effect"> 
-   <img src="figures/health_fig8.png" alt="O3 health effect"> 
-   <img src="figures/health_fig9.png" alt="O3 health effect"> 
-   <img src="figures/health_fig10.png" alt="O3 health effect"></p>
-
+<h2 id="Visualizations-and-Analysis:">Visualizations and Analysis:<a class="anchor-link" href="#Visualizations-and-Analysis:">&#182;</a></h2>
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
 </div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
-<h2 id="Analysis-and-Conclusions:">Analysis and Conclusions:<a class="anchor-link" href="#Analysis-and-Conclusions:">&#182;</a></h2>
+<p><h3> Air Pollutants Visualizations: </h3></p>
+<p><h4> The following figures display how the levels of the air pollutants PM2.5, NO2, O3 and SO2 have changed in NYC over the past decade from 2009-2017.
+</h4></p>
+<p><p></p>
+<p><li> Note that unlike for the other pollutants, we only have data values for SO2 pollutant from 2009 up to 2016. The reason we don't have data for the more recent years 2017-2018 is because the SO2 levels have decreased so much in NYC that it is almost undetectable to be able to collect data on it. </li>
+&lt;/p&gt;</p>
+<div>
+    <img src="figures/NO2_pollutant.png" alt="NO2 Concentration" style="float: right;"width=400px/>
+    <img src="figures/PM25_pollutant.png" alt="PM2.5 Concentration" style="float: left;" width=400px/>
+</div>
+<div>
+    <img src="figures/O3_pollutant.png" alt="O3 Concentration" style="float: right;" width=400px/>
+    <img src="figures/SO2_pollutant.png" alt="SO2 Concentration" style="float: left;" width=400px/>
+</div>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><h3> Analysis of air pollutants data and visualizations: </h3></p>
+<p>
+    <li>By looking at the figures, we can see that the levels of all air pollutants except for O3 in NYC has decreased significantly over the past decade in all boroughs. This might be a result of the clean air laws and regulations that the city has passed in the last decade to improve air quality. 
+    </li>
+</p>
+<p>
+    <li>Unlike the levels of the other pollutants, there isn't a consistent trend in the changes in the levels of the pollutant O3 over the past decade. The reason for this is because the levels of O3 is related to the weather temperature. The ground level O3 pollutant forms when heat and sunlight causes reaction between certain air pollutants in the atmosphere. That's also the reason why the levels of O3 pollutant are measured in the summertime.  
+    </li>
+</p>
+<p>
+    <li>Except for the air pollutant O3, the levels of all air pollutants have been the highest in Mahattan and lowest in Staten Island. Meanwhile the level of O3 is highest in Staten Island, while lowest in Manhattan. The explanation for this is because when O3 reacts with nitrogen oxide (NOx) emissions such as NO2 emissions at ground level, it reduces the concentration of O3. Since Manhattan has the highest levels of NO2, it has the lowest levels of O3 and since Staten Island has the lowest concentration of NO2, it has the highest concentration of O3.
+    </li>
+</p>
+<p>
+    <li>Even with such significant improvement in air quality, the concentrations of PM2.5, known as one of the most harmful pollutant, still remains above the WHO guideline value of 5 μg/m3 annual mean in all of the boroughs with Manhattan having the highest concentration of this pollutant compared to other boroughs. 
+    </li>
+</p>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><h3> Health Effects Visualizations: </h3></p>
+<p> Note: For the data on health effects of air pollition, the dataset only contained data on the effects of the pollutant PM2.5 and O3. The reason for this might be that there might not be enough statistical data on the health effects of the other air pollutants. Therefore the following visualizations show the effects of the air pollutants PM2.5 and O3 on the the health of NYC residents. </p><p><h4><li> The following figures display how the the air pollutants PM2.5 has affected the health of the residents of NYC over the past decade from 2009-2017. </li></h4></p>
+<div>
+    <img src="figures/health_fig2.png" alt="PM25 health effect" style="float: right;"width=400px/>
+    <img src="figures/health_fig1.png" alt="PM25 health effect" style="float: left;" width=400px/>
+</div>
+<div>
+    <img src="figures/health_fig3.png" alt="PM25 health effect" style="float: right;" width=400px/>
+    <img src="figures/health_fig4.png" alt="PM25 health effect" style="float: left;" width=400px/>
+</div>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<div>
+    <img src="figures/health_fig6.png" alt="PM25 health effect" style="float: left;" width=400px/>
+</div>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><h4><li> The following figures display how the the air pollutants O3 has affected the health of the residents of NYC over the past decade from 2009-2017. </li></h4></p>
+<div>
+    <div>
+        <img src="figures/health_fig5.png" alt="O3 health effect" style="float: right;" width=400px/>
+        <img src="figures/health_fig7.png" alt="O3 health effect" style="float: left;"width=400px/>
+    </div>
+</div>
+<div>
+    <div>
+        <img src="figures/health_fig8.png" alt="O3 health effect" style="float: right;" width=400px/>
+        <img src="figures/health_fig9.png" alt="O3 health effect" style="float: left;" width=400px/>
+    </div>
+</div>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<p><h3> Analysis of data and visualizations on the health effects of PM2.5 and O3 pollutants on NYC: </h3></p>
+<p>
+    <li>By looking at the figures, we can see that on average, the residents of Bronx have experienced the worst health effects of both the PM2.5 and O3 pollutants over the past decade compared to the other boroughs in terms of hospitalizations and emergency department visits attributable to those air pollutants. However, Staten Island is the one that has experienced the worst health effects in terms of deaths attributable to those air pollutants followed by Bronx. Brooklyn also seems to have experienced worst health effects of these pollutants than Manhattan for some categories of the health effects. Queens seems to be the borough that has experienced the least health effects of these air pollutants compared to the other boroughs. 
+    </li>
+</p>
+</div>
+</div>
+<div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
+</div><div class="jp-RenderedHTMLCommon jp-RenderedMarkdown jp-MarkdownOutput " data-mime-type="text/markdown">
+<h2 id="Key-Discoveries-and-Conclusions:">Key Discoveries and Conclusions:<a class="anchor-link" href="#Key-Discoveries-and-Conclusions:">&#182;</a></h2><ul>
+<li>Although Manhattan has the greatest levels for all air pollutants except O3, the other boroughs Bronx, Staten Island, and Brooklyn are the ones that experienced the worst health effects of air pollution on average. This proved my initial hypothesis to be wrong as I had expected Manhattan to also experience the worst health effects of air pollution since it has the highest air pollution. I assume one reason why the other boroughs experienced worse health effects of air pollution might because a lot of people who live in the other boroughs work in Manhattan and so they are exposed to these high levels of air pollutants frequently and for a long time while working. </li>
+<li>Although the levels of all air pollutants have significantly decreased in NYC over the last decade, the concentrations of PM2.5, known as one of the most harmful pollutant, still remains above the WHO guideline value of 5 μg/m3 annual mean in all of the boroughs. In order to further improve the air quality in NYC and decrease the health effects associated with this pollutant, NYC work towards decreasing the current levels of this pollutant.</li>
+</ul>
+
 </div>
 </div>
 <div class="jp-Cell-inputWrapper"><div class="jp-InputPrompt jp-InputArea-prompt">
